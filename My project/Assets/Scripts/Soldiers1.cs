@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Soldiers1 : MonoBehaviour
 {
+    private static int cloneCount = 0;
+    public int maxClones = 3;
+
     public Transform player; // Assign the player 
     public float followSpeed = 3f;
 
@@ -46,29 +49,32 @@ public class Soldiers1 : MonoBehaviour
     {
         if (collision.gameObject.CompareTag(Name1) || collision.gameObject.CompareTag(Name2) || collision.gameObject.CompareTag(Name3))
         {
-            StartCoroutine(DestroyOrClone(collision.gameObject, 0.1f)); ;
+            StopAllCoroutines();
+            StartCoroutine(DestroyOrClone(collision.gameObject, .2f));
         }
     }
+
 
     private void OnCollisionStay2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag(Name1) || collision.gameObject.CompareTag(Name2) || collision.gameObject.CompareTag(Name3))
         {
-            followSpeed = 0.2f;
+            followSpeed = 0.5f;
         }
-    }
-
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        StopAllCoroutines();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag(Name1) || collision.gameObject.CompareTag(Name2) || collision.gameObject.CompareTag(Name3))
         {
-            Instantiate(gameObject);
+            StopAllCoroutines();
+            StartCoroutine(DestroyOrClone2(collision.gameObject, .2f));
         }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        followSpeed = 2f;
     }
 
     private IEnumerator DestroyOrClone(GameObject target, float delay)
@@ -79,12 +85,12 @@ public class Soldiers1 : MonoBehaviour
         {
             float chance = Random.value; // Random float between 0 and 1
 
-            if (chance <= 0.2f)
+            if (chance <= 0.1f)
             {
                 CloneSoldier(target);
                 Destroy(target);
             }
-            else if (chance >= 0.8f)
+            else if (chance >= 0.6f)
             {
                 Destroy(target);
             }
@@ -97,29 +103,34 @@ public class Soldiers1 : MonoBehaviour
 
     private IEnumerator DestroyOrClone2(GameObject target, float delay) // If Surrounded
     {
+
         yield return new WaitForSeconds(delay);
 
         if (target != null)
         {
             float chance = Random.value; // Random float between 0 and 1
 
-            if (chance <= 0.05f)
+            if (chance <= 0.20f)
             {
                 CloneSoldier(target);
+                Destroy(target);
             }
-            else if (chance >= 0.9f)
+            else if (chance >= 0.4f)
             {
                 Destroy(target);
             }
             else
             {
-                StopAllCoroutines();
+                followSpeed = -30f;
             }
         }
     }
 
     private void CloneSoldier(GameObject original)
     {
+        if (cloneCount >= maxClones) return; // Prevent excessive cloning
+
         Instantiate(soldierPrefab, original.transform.position, Quaternion.identity);
+        cloneCount++;
     }
 }

@@ -4,13 +4,18 @@ using UnityEngine;
 
 public class Powerup : MonoBehaviour
 {
+    public bool isClone;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        for (int i = 0; i < 10; i++)
+        if (isClone)
         {
-            Instantiate(collision.gameObject);
+            for (int i = 0; i < 10; i++)
+            {
+                Instantiate(collision.gameObject);
+            }
+            Destroy(gameObject);
         }
-        Destroy(gameObject);
     }
 
 }
