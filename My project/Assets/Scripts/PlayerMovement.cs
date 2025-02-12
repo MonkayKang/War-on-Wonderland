@@ -13,10 +13,12 @@ public class PlayerMovement : MonoBehaviour
     public string verticalAxis = "Vertical";
 
     private Rigidbody2D rb;
+    private SpriteRenderer spriteRenderer;  // Reference to the SpriteRenderer
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>(); // Initialize SpriteRenderer
     }
 
     void Update()
@@ -30,6 +32,16 @@ public class PlayerMovement : MonoBehaviour
         float moveY = Input.GetAxisRaw(verticalAxis);
         Vector2 movement = new Vector2(moveX, moveY).normalized;
         rb.velocity = movement * speed;
+
+        // Flip the sprite based on movement direction
+        if (movement.x < 0) // Moving left
+        {
+            spriteRenderer.flipX = true;  // Flip the sprite horizontally
+        }
+        else if (movement.x > 0) // Moving right
+        {
+            spriteRenderer.flipX = false; // Reset the sprite to normal
+        }
     }
 
     public void OnCollisionEnter2D(Collision2D collision)
@@ -54,3 +66,4 @@ public class PlayerMovement : MonoBehaviour
         speed = normalSpeed;
     }
 }
+
