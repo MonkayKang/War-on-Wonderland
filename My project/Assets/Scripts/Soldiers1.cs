@@ -10,21 +10,35 @@ public class Soldiers1 : MonoBehaviour
     public string Name1 = "Name1";
     public string Name2 = "Name2";
     public string Name3 = "Name3";
-    private int hitcount = 0;
 
     public float stopDistance = 1f; // Distance to stop near the player
 
     private GameObject soldierPrefab; // Assign this in the Inspector
+    private BoxCollider2D boxCollider;
+
     private void Start()
     {
         soldierPrefab = gameObject;
+        boxCollider = GetComponent<BoxCollider2D>();
     }
+
     void Update()
     {
         float distance = Vector2.Distance(transform.position, player.position);
         if (distance > stopDistance)
         {
+            Vector3 direction = (player.position - transform.position).normalized;
             transform.position = Vector2.Lerp(transform.position, player.position, followSpeed * Time.deltaTime);
+
+            // Flip object and hitbox based on movement direction
+            if (direction.x > 0)
+            {
+                transform.rotation = Quaternion.Euler(0, 0, 0);
+            }
+            else if (direction.x < 0)
+            {
+                transform.rotation = Quaternion.Euler(0, 180, 0);
+            }
         }
     }
 
@@ -32,42 +46,29 @@ public class Soldiers1 : MonoBehaviour
     {
         if (collision.gameObject.CompareTag(Name1) || collision.gameObject.CompareTag(Name2) || collision.gameObject.CompareTag(Name3))
         {
-            hitcount++;
+            StartCoroutine(DestroyOrClone(collision.gameObject, 0.1f)); ;
         }
     }
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if (hitcount < 2)
-        {
-            if (collision.gameObject.CompareTag(Name1) || collision.gameObject.CompareTag(Name2) || collision.gameObject.CompareTag(Name3))
-            {
-                followSpeed = .0f;
-                StartCoroutine(DestroyOrClone(collision.gameObject, 0.1f));
-            }
-        }
-        if (hitcount >= 2)
-        {
-            if (collision.gameObject.CompareTag(Name1) || collision.gameObject.CompareTag(Name2) || collision.gameObject.CompareTag(Name3))
-            {
-                followSpeed = .0f;
-                StartCoroutine(DestroyOrClone2(collision.gameObject, 0.1f));
-            }
-        }
-    }
-
-    private void OnTriggerStay2D(Collider2D collision)
-    {
         if (collision.gameObject.CompareTag(Name1) || collision.gameObject.CompareTag(Name2) || collision.gameObject.CompareTag(Name3))
         {
-            StartCoroutine(DestroyOrClone(collision.gameObject, 0.1f));
+            followSpeed = 0.2f;
         }
     }
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        hitcount = 0;
-        followSpeed = 2f;
+        StopAllCoroutines();
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag(Name1) || collision.gameObject.CompareTag(Name2) || collision.gameObject.CompareTag(Name3))
+        {
+            Instantiate(gameObject);
+        }
     }
 
     private IEnumerator DestroyOrClone(GameObject target, float delay)
@@ -78,7 +79,7 @@ public class Soldiers1 : MonoBehaviour
         {
             float chance = Random.value; // Random float between 0 and 1
 
-            if (chance <= 0.1f)
+            if (chance <= 0.2f)
             {
                 CloneSoldier(target);
                 Destroy(target);
@@ -89,12 +90,12 @@ public class Soldiers1 : MonoBehaviour
             }
             else
             {
-                StopAllCoroutines();
+                followSpeed = -30f;
             }
         }
     }
 
-    private IEnumerator DestroyOrClone2(GameObject target, float delay)
+    private IEnumerator DestroyOrClone2(GameObject target, float delay) // If Surrounded
     {
         yield return new WaitForSeconds(delay);
 
@@ -106,7 +107,6 @@ public class Soldiers1 : MonoBehaviour
             {
                 CloneSoldier(target);
             }
-
             else if (chance >= 0.9f)
             {
                 Destroy(target);
@@ -115,7 +115,6 @@ public class Soldiers1 : MonoBehaviour
             {
                 StopAllCoroutines();
             }
-
         }
     }
 
@@ -123,5 +122,4 @@ public class Soldiers1 : MonoBehaviour
     {
         Instantiate(soldierPrefab, original.transform.position, Quaternion.identity);
     }
-    // ADD A SMALL BOX INFRONT AND THEN FLIP SPRITES
 }

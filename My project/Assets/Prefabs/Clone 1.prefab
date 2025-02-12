@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 4494112184984282078}
   - component: {fileID: -6074928775955849349}
   - component: {fileID: 1455027614573321470}
-  - component: {fileID: -3848232526689874158}
-  - component: {fileID: 4349605329326317652}
+  - component: {fileID: 7669434261727146002}
+  - component: {fileID: 7845100093772204041}
   m_Layer: 0
   m_Name: Clone 1
   m_TagString: Untagged
@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  followSpeed: 2
+  followSpeed: -10
   Name1: Name1
   Name2: Name2
   Name3: Name3
@@ -133,7 +133,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!60 &-3848232526689874158
+--- !u!60 &7669434261727146002
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -181,8 +181,8 @@ PolygonCollider2D:
       - {x: -0.5, y: -0.28866667}
       - {x: 0.5, y: -0.28866667}
   m_UseDelaunayMesh: 0
---- !u!70 &4349605329326317652
-CapsuleCollider2D:
+--- !u!61 &7845100093772204041
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -196,7 +196,7 @@ CapsuleCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 0
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -213,6 +213,16 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.004644394, y: 0.005017519}
-  m_Size: {x: 0.6641426, y: 5.334346}
-  m_Direction: 0
+  m_Offset: {x: 0.42199188, y: 0.14539713}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.28866667}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.7890036, y: 0.93406355}
+  m_EdgeRadius: 0
