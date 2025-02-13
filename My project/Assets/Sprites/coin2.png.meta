@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 33ebbb8bdfcb69446a7d5655abd840d8
+guid: 328d04d55d89af343bf1b7df10c27aee
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,13 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Hearts_0
+      name: coin2_0
       rect:
         serializedVersion: 2
-        x: 15
-        y: 77
-        width: 34
-        height: 38
+        x: 7
+        y: 199
+        width: 49
+        height: 49
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -111,20 +111,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b825bd44e9da54b49b43d606cc364f24
-      internalID: -320292776
+      spriteID: 79d57b5ae8ef99a4297b409b82836c51
+      internalID: -595210881
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hearts_1
+      name: coin2_1
       rect:
         serializedVersion: 2
-        x: 78
-        y: 76
-        width: 36
-        height: 41
+        x: 72
+        y: 199
+        width: 48
+        height: 49
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -132,20 +132,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 568cbc583f46ef04d83f727c7a652a0e
-      internalID: -237361060
+      spriteID: 671605c2ea020b54696880ada67ca3bd
+      internalID: 1466070948
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hearts_2
+      name: coin2_2
       rect:
         serializedVersion: 2
-        x: 141
-        y: 75
+        x: 137
+        y: 199
+        width: 46
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93f64e86620e6a14c8ef13a877499c82
+      internalID: -42735208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin2_3
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 135
         width: 39
-        height: 43
+        height: 49
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,20 +174,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f7dee6deeeeb750448de55cfb7aa142d
-      internalID: -686195294
+      spriteID: 464490d931377d94cb99e45f74170f8a
+      internalID: 1495258108
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hearts_3
+      name: coin2_4
       rect:
         serializedVersion: 2
-        x: 202
-        y: 72
-        width: 42
-        height: 47
+        x: 83
+        y: 135
+        width: 26
+        height: 49
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -174,20 +195,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d14d0761578bd4e4fb3d48debeb9a5ae
-      internalID: 742112556
+      spriteID: 275941c86e72d904b87bf3a768b1c995
+      internalID: -533133491
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hearts_4
+      name: coin2_5
       rect:
         serializedVersion: 2
-        x: 267
-        y: 72
-        width: 44
-        height: 48
+        x: 157
+        y: 135
+        width: 5
+        height: 49
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -195,20 +216,83 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fc4f8e7d714067a40ba8f9c93d1f54b8
-      internalID: 291198199
+      spriteID: eba5376c23e1a544f89c3317626701f2
+      internalID: -1398631127
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hearts_5
+      name: coin2_6
       rect:
         serializedVersion: 2
-        x: 10
+        x: 29
+        y: 71
+        width: 5
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32c995241f9e4f74c87f4d7c6084fee9
+      internalID: -66924020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin2_7
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 71
+        width: 26
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38af9bdebae2979478ec46db97c74e3e
+      internalID: -1524119002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin2_8
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 71
+        width: 39
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ef7476fd15234a4fb529a18f1a818ee
+      internalID: 1854940465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin2_9
+      rect:
+        serializedVersion: 2
+        x: 9
         y: 7
-        width: 44
-        height: 51
+        width: 46
+        height: 49
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -216,20 +300,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3a922cef042e8a24db80e31bd5a6aa09
-      internalID: 1542483699
+      spriteID: 6c20bb1268f6b0b48b153a3e02fcaae5
+      internalID: 1993865776
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hearts_6
+      name: coin2_10
       rect:
         serializedVersion: 2
-        x: 69
-        y: 6
-        width: 51
-        height: 51
+        x: 72
+        y: 7
+        width: 48
+        height: 49
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -237,20 +321,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d1409e24dabcb224594317ded591e13a
-      internalID: 938056768
+      spriteID: 4d05108bc81a0e045926e11a2e014ba7
+      internalID: -1424241541
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hearts_7
+      name: coin2_11
       rect:
         serializedVersion: 2
-        x: 130
-        y: 5
-        width: 58
-        height: 53
+        x: 135
+        y: 7
+        width: 49
+        height: 49
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -258,50 +342,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6a6455c15b0e709479207b238c8bb124
-      internalID: -561035104
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Hearts_8
-      rect:
-        serializedVersion: 2
-        x: 199
-        y: 4
-        width: 54
-        height: 56
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c5150e126d01bfd43995a27acd24470e
-      internalID: 62707825
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Hearts_9
-      rect:
-        serializedVersion: 2
-        x: 257
-        y: 2
-        width: 58
-        height: 59
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 899f00cce10062c4e944bdde8bf33b9e
-      internalID: 1487321736
+      spriteID: 438d53dd2feade347bed595e75e1fdaa
+      internalID: 74509314
       vertices: []
       indices: 
       edges: []
@@ -317,16 +359,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Hearts_0: -320292776
-      Hearts_1: -237361060
-      Hearts_2: -686195294
-      Hearts_3: 742112556
-      Hearts_4: 291198199
-      Hearts_5: 1542483699
-      Hearts_6: 938056768
-      Hearts_7: -561035104
-      Hearts_8: 62707825
-      Hearts_9: 1487321736
+      coin2_0: -595210881
+      coin2_1: 1466070948
+      coin2_10: -1424241541
+      coin2_11: 74509314
+      coin2_2: -42735208
+      coin2_3: 1495258108
+      coin2_4: -533133491
+      coin2_5: -1398631127
+      coin2_6: -66924020
+      coin2_7: -1524119002
+      coin2_8: 1854940465
+      coin2_9: 1993865776
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

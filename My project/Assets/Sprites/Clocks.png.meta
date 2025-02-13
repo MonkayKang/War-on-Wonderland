@@ -118,33 +118,12 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Clocks_1
-      rect:
-        serializedVersion: 2
-        x: 71
-        y: 87
-        width: 10
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b7886d89b3a70c4458bf07f5babb902b
-      internalID: 1937197398
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Clocks_2
       rect:
         serializedVersion: 2
-        x: 78
+        x: 71
         y: 68
-        width: 47
+        width: 54
         height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -202,33 +181,12 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Clocks_5
-      rect:
-        serializedVersion: 2
-        x: 266
-        y: 87
-        width: 8
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 95ddd706142ad3043ba4e9857a83ca57
-      internalID: -322398148
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Clocks_6
       rect:
         serializedVersion: 2
-        x: 272
+        x: 266
         y: 71
-        width: 32
+        width: 45
         height: 56
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -239,27 +197,6 @@ TextureImporter:
       bones: []
       spriteID: 0d06e14947b3ac9418794cacf707f5df
       internalID: 749989358
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Clocks_7
-      rect:
-        serializedVersion: 2
-        x: 299
-        y: 72
-        width: 12
-        height: 47
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 56fb81f3b582c5543a2d714f61fdbd56
-      internalID: 610289995
       vertices: []
       indices: 
       edges: []
@@ -349,33 +286,12 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Clocks_12
-      rect:
-        serializedVersion: 2
-        x: 271
-        y: 28
-        width: 7
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6d058de0c90eb5440ac371c2527b3e58
-      internalID: -1806876777
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Clocks_13
       rect:
         serializedVersion: 2
-        x: 276
+        x: 271
         y: 14
-        width: 29
+        width: 34
         height: 37
       alignment: 0
       pivot: {x: 0, y: 0}
