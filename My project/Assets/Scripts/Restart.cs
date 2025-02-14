@@ -5,18 +5,22 @@ using UnityEngine.SceneManagement;
 
 public class Restart : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R)) 
+
+        if (Input.GetKeyDown(KeyCode.KeypadPlus))
         {
-            SceneManager.LoadScene(0);        
+            RestartGame();
         }
+    }
+
+    void RestartGame()
+    {
+        SceneManager.LoadScene(0);
+    }
+
+    public void StartGame()
+    {
+        SceneManager.LoadScene(1);
     }
 }

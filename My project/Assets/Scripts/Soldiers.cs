@@ -4,20 +4,21 @@ using UnityEngine;
 
 public class Soldiers : MonoBehaviour
 {
-    private static int cloneCount = 0;
-    public int maxClones = 3;
-
     public Transform player; // Assign the player 
     public float followSpeed = 3f;
 
-    public string Name1 = "Name1";
-    public string Name2 = "Name2";
-    public string Name3 = "Name3";
+    public string Name1 = "Clone1";
+    public string Name2 = "Clone2";
+    public string Name3 = "Clone4";
 
     public float stopDistance = 1f; // Distance to stop near the player
 
     private GameObject soldierPrefab; // Assign this in the Inspector
     private BoxCollider2D boxCollider;
+
+    public AudioClip clip;
+    public AudioClip clip2;
+    public AudioSource source;
 
     private void Start()
     {
@@ -49,6 +50,7 @@ public class Soldiers : MonoBehaviour
     {
         if (collision.gameObject.CompareTag(Name1) || collision.gameObject.CompareTag(Name2) || collision.gameObject.CompareTag(Name3))
         {
+            source.PlayOneShot(clip);
             StopAllCoroutines();
             StartCoroutine(DestroyOrClone(collision.gameObject, .2f));
         }
@@ -88,10 +90,12 @@ public class Soldiers : MonoBehaviour
             if (chance <= 0.1f)
             {
                 CloneSoldier(target);
+                source.PlayOneShot(clip2);
                 Destroy(target);
             }
             else if (chance >= 0.6f)
             {
+                source.PlayOneShot(clip2);
                 Destroy(target);
             }
             else
@@ -113,10 +117,12 @@ public class Soldiers : MonoBehaviour
             if (chance <= 0.20f)
             {
                 CloneSoldier(target);
+                source.PlayOneShot(clip2);
                 Destroy(target);
             }
             else if (chance >= 0.4f)
             {
+                source.PlayOneShot(clip2);
                 Destroy(target);
             }
             else
@@ -128,9 +134,6 @@ public class Soldiers : MonoBehaviour
 
     private void CloneSoldier(GameObject original)
     {
-        if (cloneCount >= maxClones) return; // Prevent excessive cloning
-
         Instantiate(soldierPrefab, original.transform.position, Quaternion.identity);
-        cloneCount++;
     }
 }

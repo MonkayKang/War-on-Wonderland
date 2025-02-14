@@ -11,5 +11,6 @@ public class Powerup : MonoBehaviour
             Instantiate(collision.gameObject);
         }
         Destroy(gameObject);
+        Destroy (gameObject);
     }
 }

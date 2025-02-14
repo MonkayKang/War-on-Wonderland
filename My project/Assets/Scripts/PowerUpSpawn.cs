@@ -9,6 +9,9 @@ public class PowerUpSpawn : MonoBehaviour
     public LayerMask obstacleLayer;
     public float checkRadius = 1f; // Radius to check for collisions
 
+
+    public static int hasWinner;
+
     void Start()
     {
         StartCoroutine(SpawnRoutine());
